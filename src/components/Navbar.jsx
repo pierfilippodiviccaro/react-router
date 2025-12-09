@@ -17,6 +17,11 @@ export default function Navbar() {
                              i nostri prodotti
                             </NavLink>
                         </li>
+                       <li className="nav-item">
+                            <NavLink className="nav-link" aria-current="page" to="/chisiamo">
+                             un po su di noi
+                            </NavLink>
+                        </li>
                       
             </ul>            
             </div>
