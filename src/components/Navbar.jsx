@@ -16,7 +16,8 @@ export default function Navbar() {
                             </NavLink>
                         </li>
                         <li className="nav-item">
-                          
+                          <NavLink className="nav-link" aria-current="page" to="/">
+                          ritrorna alla home</NavLink>
                         </li>
             </ul>            
             </div>

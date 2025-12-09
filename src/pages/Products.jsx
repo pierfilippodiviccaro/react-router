@@ -3,28 +3,29 @@ import axios from "axios"
 export default function Products(){
 const [prodotti,setProdotti]= useState([]);
 const [caricamento, setCaricamento]= useState(false);
-const [pagina, setPagina]=useState(1)
+
 
 useEffect(()=>{
     fetchProdotti()
-},[pagina])
+},[])
 function fetchProdotti(){
     setCaricamento(true);
     axios
     .get("https://fakestoreapi.com/products")
     .then((resp)=>{
-        setProdotti(resp.data.results);
+        setProdotti(resp.data);
         setCaricamento(false)
     })
 }
 return(
-<div className="container py-5">
-    <h1>tutti i nostri prodotti</h1>
-   <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3">
+    <div className="container py-5 ">
+    <h1 className="text-danger">tutti i nostri prodotti</h1>
+   <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3 d-flex flex-column">
     {prodotti.map((prodotto)=>(
-        <div className="col" key={prodotto.id}>
-            <h2>{prodotto.title}</h2>
-            <p>{prodotto}</p>
+        <div className="col" key={prodotto.id} >
+            
+            <h3>{prodotto.title}</h3>
+            <p>{prodotto.description}</p>
         </div>
     ))}
    </div>
