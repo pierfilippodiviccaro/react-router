@@ -25,7 +25,6 @@ return(
         <div className="col" key={prodotto.id} >
             
             <h3>{prodotto.title}</h3>
-            <p>{prodotto.description}</p>
             <Link to={`/products/${prodotto.id}`}>vedi di più</Link>
         </div>
     ))}

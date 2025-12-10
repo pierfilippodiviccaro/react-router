@@ -1,12 +1,14 @@
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
- import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import DefaultLayout from './layout/DefaultLayout';
 import Home from './pages/Home';
 import Products from './pages/Products';
 import About from './pages/chiSiamo'
 import SingleProduct from './pages/SingleProduct';
+import NotFound from './pages/NotFound';
 
+// http://localhost:5173/pippo => /products/pippo
 
 function App() {
   return (
@@ -15,8 +17,9 @@ function App() {
         <Route element={<DefaultLayout />}>
           <Route path="/" element={<Home />} />
           <Route path="/products" element={<Products />} />
-          <Route path='/chisiamo' element={<About/>}/>
-          <Route path='/products/:id' element='SingleProduct'/>
+          <Route path='/chisiamo' element={<About />} />
+          <Route path='/products/:id' element={<SingleProduct />} />
+          <Route path='*' element={<NotFound />} />
         </Route>
       </Routes>
     </BrowserRouter>

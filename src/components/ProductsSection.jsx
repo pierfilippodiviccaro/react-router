@@ -11,8 +11,8 @@ export default function ProductsSection({ prodotto }) {
         </div>
         <div className="col-12 col-md-7">
           <h1>{prodotto.title}</h1>
-          <h2>prezzo:{prodotto.price}</h2>
-          <p>categoria:{prodotto.category}</p>
+          <h2>prezzo: {prodotto.price}€</h2>
+          <p>categoria: {prodotto.category}</p>
           <p>{prodotto.description}</p>
         </div>
       </div>

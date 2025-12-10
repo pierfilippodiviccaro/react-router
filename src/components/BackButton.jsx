@@ -6,7 +6,7 @@ export default function BackButton(){
         navigate(-1)
     }
     return(
-        <a href="" className="btn btn-success" onClick={VaiIndietro}>
+        <a href="" className="btn btn-warning" onClick={VaiIndietro}>
             Ritorna indietro
         </a>
     )
