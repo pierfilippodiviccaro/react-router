@@ -5,8 +5,11 @@ export default function NotFound() {
   return (
     <section>
       <h1>404 Not found!</h1>
-      <Link className="btn btn-primary" to="/">
+      <Link className="btn btn-primary ms-2" to="/">
          torna alla Pagina Home
+      </Link>
+      <Link className="btn btn-success ms-3" to="/products">
+      oppure ritorna nei prodotti
       </Link>
     </section>
   );

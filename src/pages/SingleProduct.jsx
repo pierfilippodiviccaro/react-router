@@ -14,7 +14,7 @@ export default function SingleProduct() {
         axios
             .get(`https://fakestoreapi.com/products/${id}`)
             .then((resp) => {
-                // Se il prodotto non c'e' ridirigo alla lista prodotti
+                
                 setProdotto(resp.data)
                 if(resp.data === ""){
                     setNotFound(true)
