@@ -5,6 +5,7 @@ import DefaultLayout from './layout/DefaultLayout';
 import Home from './pages/Home';
 import Products from './pages/Products';
 import About from './pages/chiSiamo'
+import SingleProduct from './pages/SingleProduct';
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/products" element={<Products />} />
           <Route path='/chisiamo' element={<About/>}/>
+          <Route path='/products/:id' element='SingleProduct'/>
         </Route>
       </Routes>
     </BrowserRouter>
